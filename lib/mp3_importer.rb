@@ -24,7 +24,7 @@ class MP3Importer
   private
   
   def short_name (name)
-    name.sub!("./db/mp3s/", "")
+    name.sub!(/^.*mp3s/, "")
     name
   end
 
