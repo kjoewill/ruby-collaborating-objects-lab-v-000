@@ -30,8 +30,8 @@ class MP3Importer
 
 end
 
-puts "Starting import"
+#puts "Starting import"
 #MP3Importer.new("./db/mp3s").import
-importer = MP3Importer.new("./spec/fixtures/mp3s")
-puts importer.files.size
-puts importer.files
+#importer = MP3Importer.new("./spec/fixtures/mp3s")
+#puts importer.files.size
+#puts importer.files
