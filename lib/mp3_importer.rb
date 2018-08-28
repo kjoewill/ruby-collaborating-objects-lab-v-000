@@ -14,11 +14,7 @@ class MP3Importer
   end
 
   def import 
-    full_path = self.path + "/*.mp3"
-    file_names = Dir[full_path]
-    puts file_names.inspect
-    short_names = file_names.collect { |e| short_name(e) }
-    #short_names.each { |e| Song.new_by_filename(e) }
+    self.files.each { |e| Song.new_by_filename(e) }
   end
  
   private
