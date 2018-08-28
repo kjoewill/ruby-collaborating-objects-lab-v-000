@@ -5,7 +5,8 @@ class MP3Importer
   def initialize(path)
     @path = path
     full_path = self.path + "/*.mp3"
-    @files = Dir[full_path]
+    filenames_with_path = Dir[full_path]
+    @files = filenames_with_path
   end
 
   def files
@@ -24,7 +25,6 @@ class MP3Importer
   
   def short_name (name)
     name.sub!("./db/mp3s/", "")
-    #name.sub!(".mp3", "")
     name
   end
 
@@ -34,3 +34,4 @@ puts "Starting import"
 #MP3Importer.new("./db/mp3s").import
 importer = MP3Importer.new("./spec/fixtures/mp3s")
 puts importer.files.size
+puts importer.files
