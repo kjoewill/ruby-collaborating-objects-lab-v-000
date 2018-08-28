@@ -32,4 +32,5 @@ end
 
 puts "Starting import"
 #MP3Importer.new("./db/mp3s").import
-MP3Importer.new("./spec/fixtures/mp3s").import
+importer = MP3Importer.new("./spec/fixtures/mp3s")
+importer.files.size
